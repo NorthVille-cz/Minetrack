@@ -1,0 +1,8 @@
+node_modules/
+minetrack.log
+.idea/
+database.sql
+database.sql-journal
+.DS_Store
+dist/
+.cache/

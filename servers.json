@@ -1,0 +1,12 @@
+[
+	{
+		"name": "NorthVille",
+		"ip": "mc.northville.cz",
+		"type": "PC"
+	},
+	{
+		"name": "Agonia",
+		"ip": "play.agonia.cz",
+		"type": "PC"
+	}
+]
