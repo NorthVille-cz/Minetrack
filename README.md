@@ -92,3 +92,4 @@ server {
         proxy_set_header Connection 'upgrade';
     }
 }
+```
