@@ -1,12 +1,12 @@
 [
 	{
-		"name": "NorthVille",
-		"ip": "mc.northville.cz",
+		"name": "NorthVille.cz",
+		"ip": "play.northville.cz",
 		"type": "PC"
 	},
 	{
-		"name": "Agonia",
-		"ip": "play.agonia.cz",
+		"name": "Agonia.cz",
+		"ip": "mc.agonia.cz",
 		"type": "PC"
 	}
 ]

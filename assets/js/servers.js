@@ -285,7 +285,7 @@ export class ServerRegistration {
         <h3 class="server-name"><span class="${this._app.favoritesManager.getIconClass(this.isFavorite)}" id="favorite-toggle_${this.serverId}"></span> ${this.data.name}</h3>
         <span class="server-error" id="error_${this.serverId}"></span>
         <span class="server-label" id="player-count_${this.serverId}">Hráčů: <span class="server-value" id="player-count-value_${this.serverId}"></span></span>
-        <span class="server-label" id="peak_${this.serverId}">${this._app.publicConfig.graphDurationLabel} Spička: <span class="server-value" id="peak-value_${this.serverId}">-</span></span>
+        <span class="server-label" id="peak_${this.serverId}">${this._app.publicConfig.graphDurationLabel} Rekord: <span class="server-value" id="peak-value_${this.serverId}">-</span></span>
         <span class="server-label" id="record_${this.serverId}">Rekord: <span class="server-value" id="record-value_${this.serverId}">-</span></span>
         <span class="server-label" id="version_${this.serverId}"></span>
       </div>

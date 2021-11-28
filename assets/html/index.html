@@ -4,7 +4,9 @@
 
 <head>
 
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" href="../css/main.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap"> 
 
 	<link rel="icon" type="image/svg+xml" href="../images/logo.svg">
 
@@ -34,30 +36,13 @@
 			<div class="header-possible-row-break column-left">
 				<img class="logo-image" src="../images/logo.svg">
 				<h1 class="logo-text">Minetrack</h1>
-				<p class="logo-status">Počítání <span class="global-stat" id="stat_totalPlayers">0</span> hráčů <span class="global-stat" id="stat_networks">0</span> Minecraft serverech.</p>
+				<p class="logo-status">Počítání <span class="global-stat" id="stat_totalPlayers">0</span> hráčů na <span class="global-stat" id="stat_networks">0</span> Minecraft serverech.</p>
 			</div>
 
 			<div class="header-possible-row-break column-right">
-				<div id="sort-by" class="header-button header-button-single"><span class="icon-sort-amount-desc"></span> Třídit podle<br><strong id="sort-by-text">...</strong></div>
+				<div id="sort-by" class="header-button header-button-single"><span class="icon-sort-amount-desc"></span> Třídit polde<br><strong id="sort-by-text">...</strong></div>
 				
-				<div id="settings-toggle" class="header-button header-button-single"><span class="icon-gears"></span> Nastavení grafu</div>
-
-				<div class="header-button header-button-group" title="Sessions" id="mojang-status_Sessions">
-					<span class="icon-globe"></span><strong>Session</strong>
-					<p class="mojang-status-text" id="mojang-status-text_Sessions">...</p>
-				</div>
-				<div class="header-button header-button-group" title="Skins" id="mojang-status_Skins">
-					<span class="icon-street-view"></span><strong>Skiny</strong>
-					<p class="mojang-status-text" id="mojang-status-text_Skins">...</p>
-				</div>
-				<div class="header-button header-button-group" title="Auth" id="mojang-status_Auth">
-					<span class="icon-lock"></span><strong>Auth</strong>
-					<p class="mojang-status-text" id="mojang-status-text_Auth">...</p>
-				</div>
-				<div class="header-button header-button-group" title="API" id="mojang-status_API">
-					<span class="icon-code"></span><strong>API</strong>
-					<p class="mojang-status-text" id="mojang-status-text_API">...</p>
-				</div>
+				<div id="settings-toggle" class="header-button header-button-single" style="margin-left: 20px;"><span class="icon-gears"></span> Nastavení grafů</div>
 			</div>
 		</header>
 
@@ -70,7 +55,7 @@
 				<span class="graph-controls-setall">
 					<a minetrack-show-type="all" class="button graph-controls-show"><span class="icon-eye"></span> Zobrazit Vše</a>
 					<a minetrack-show-type="none" class="button graph-controls-show"><span class="icon-eye-slash"></span> Skrýt Vše</a>
-					<a minetrack-show-type="favorites" class="button graph-controls-show"><span class="icon-star"></span> Pouze Oblibené</a>
+					<a minetrack-show-type="favorites" class="button graph-controls-show"><span class="icon-star"></span> Pouze Oblíbené</a>
 				</span>
 			</div>
 		</div>
@@ -80,7 +65,7 @@
 	</div>
 
 	<footer id="footer">
-		<span class="icon-code"></span> Běží na Minetrack by Cryptkeeper - <a href="https://github.com/Cryptkeeper/Minetrack">Udělej si vlastní!</a>
+		<span class="icon-code"></span> Běží na Minetrack - <a href="https://github.com/Cryptkeeper/Minetrack">udělej si vlastní!</a>
 	</footer>
 
 </body>

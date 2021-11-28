@@ -19,7 +19,7 @@ export class SocketManager {
 
     // The backend will automatically push data once connected
     this._webSocket.onopen = () => {
-      this._app.caption.set('Načítání...')
+      this._app.caption.set('Loading...')
 
       // Reset reconnection scheduling since the WebSocket has been established
       this._reconnectDelayBase = 0
@@ -33,9 +33,9 @@ export class SocketManager {
       // See https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent
       // Treat other codes as active errors (besides connectivity errors) when displaying the message
       if (event.code === 1006) {
-        this._app.caption.set('Ztráta spojení!')
+        this._app.caption.set('Lost connection!')
       } else {
-        this._app.caption.set('Odpojeno kvůli chybě.')
+        this._app.caption.set('Disconnected due to error.')
       }
 
       // Schedule socket reconnection attempt
@@ -62,10 +62,6 @@ export class SocketManager {
           payload.servers.forEach((serverPayload, serverId) => {
             this._app.addServer(serverId, serverPayload, payload.timestampPoints)
           })
-
-          if (payload.mojangServices) {
-            this._app.mojangUpdater.updateStatus(payload.mojangServices)
-          }
 
           // Init payload contains all data needed to render the page
           // Alert the app it is ready
@@ -98,11 +94,6 @@ export class SocketManager {
           this._app.percentageBar.redraw()
           this._app.updateGlobalStats()
 
-          break
-        }
-
-        case 'updateMojangServices': {
-          this._app.mojangUpdater.updateStatus(payload)
           break
         }
 
@@ -161,14 +152,14 @@ export class SocketManager {
         clearInterval(reconnectInterval)
 
         // Update displayed text
-        this._app.caption.set('Opětovné připojení...')
+        this._app.caption.set('Reconnecting...')
 
         // Attempt reconnection
         // Only attempt when reconnectDelaySeconds === 0 and not <= 0, otherwise multiple attempts may be started
         this.createWebSocket()
       } else if (this._reconnectDelaySeconds > 0) {
         // Update displayed text
-        this._app.caption.set(`Opětovné připojení za ${this._reconnectDelaySeconds}s...`)
+        this._app.caption.set(`Reconnecting in ${this._reconnectDelaySeconds}s...`)
       }
     }, 1000)
   }
