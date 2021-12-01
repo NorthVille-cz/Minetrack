@@ -1,3 +1,6 @@
+**5.6.2** *(December 1 2021)*
+- Adds Minecraft versions 1.18 to `minecraft_versions.json`
+
 **5.6.1** *(Oct 12 2021)*
 - Removed Mojang service status display, status.mojang.com/check was disabled by Mojang. See https://github.com/Cryptkeeper/Minetrack/issues/274
 
